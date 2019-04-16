@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Kite Watcher",
+  "description": "A Google Chrome extension for Kite - Zerodha.",
+  "version": "0.0.1",
+  "icons": { "128": "dist/app/icon_red.png" },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "browser_action": {
+    "default_icon": "dist/app/icon_black.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://kite.zerodha.com/*"],
+      "js": ["dist/app/content.js"],
+      "css": ["dist/app/style.css"]
+    }
+  ],
+  "background": {
+    "scripts": ["dist/app/background.js"]
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "name": "chrome-kite-watcher",
+  "version": "0.0.1",
+  "description": "A Google Chrome extension for Kite - Zerodha",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build-dev": "npm run clean && webpack -d --mode development",
+    "build-prod": "npm run clean && webpack -p --mode production",
+    "start": "webpack-dev-server --hot --mode development"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0",
+    "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.6",
+    "react-dom": "^16.8.6",
+    "react-hot-loader": "^4.8.3",
+    "react-redux": "^7.0.1",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "copy-webpack-plugin": "^5.0.2",
+    "css-loader": "^2.1.1",
+    "file-loader": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-template": "^6.2.0",
+    "lodash-webpack-plugin": "^0.11.5",
+    "node-sass": "^4.11.0",
+    "regenerator-runtime": "^0.13.2",
+    "rimraf": "^2.6.3",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.3.1"
+  }
+}
