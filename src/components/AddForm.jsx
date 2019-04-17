@@ -52,7 +52,7 @@ class AddForm extends Component {
           />
         </Form.Group>
         <Form.Group controlId="formGroupPassword">
-          <Form.Label>Instrument Price</Form.Label>
+          <Form.Label>Support Price</Form.Label>
           <Form.Control
             value={price}
             onChange={this.handlePriceChange}

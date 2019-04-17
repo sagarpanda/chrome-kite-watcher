@@ -12,10 +12,10 @@ class FooterButton extends Component {
     this.props.showBasePrice(isShowBasePrice);
   }
   render() {
-    let label = 'Show Base Prices in Marketwatch',
+    let label = 'Show these prices on Marketwatch',
         variant = 'success';
     if (this.props.isShowBasePrice) {
-      label = 'Hide Base Prices';
+      label = 'Remove these prices from Marketwatch';
       variant = 'warning'
     }
     return (
