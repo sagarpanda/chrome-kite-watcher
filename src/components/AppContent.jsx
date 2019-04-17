@@ -37,7 +37,10 @@ class AppContent extends Component {
         </Row>
         <Row className="scrollable">
           <Col>
-            <Instruments list={favStocks} />
+            <Instruments
+              goto={this.props.goto}
+              list={favStocks}
+            />
           </Col>
         </Row>
       </Container>

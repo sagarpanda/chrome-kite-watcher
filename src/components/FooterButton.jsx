@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
-import { sendClickMessage } from '../utils';
 
 class FooterButton extends Component {
   constructor(props) {
@@ -11,7 +10,6 @@ class FooterButton extends Component {
     const { favStocks, isShowBasePrice: isShow } = this.props;
     const isShowBasePrice = !isShow;
     this.props.showBasePrice(isShowBasePrice);
-    sendClickMessage({ type: 'SHOW_BASE_PRICE', payload: { isShowBasePrice, favStocks } });
   }
   render() {
     let label = 'Show Base Prices in Marketwatch',

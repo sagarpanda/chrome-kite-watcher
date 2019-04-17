@@ -1,4 +1,5 @@
 .Instruments .badge {
   float: right;
   padding: .5em;
+  cursor: pointer;
 }

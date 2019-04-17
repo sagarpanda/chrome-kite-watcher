@@ -7,7 +7,13 @@ import Badge from 'react-bootstrap/Badge';
 import './Instruments.css';
 
 class Instruments extends Component {
-
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick(item) {
+    this.props.goto(1, { action: 'edit', data: {...item} });
+  }
   render() {
     const list = this.props.list || [];
     return (
@@ -16,7 +22,7 @@ class Instruments extends Component {
           this.props.list.map(item => (
             <ListGroup.Item key={item.name}>
               <span>{item.name}</span>
-              <Badge>{item.price}</Badge>
+              <Badge onClick={() => this.handleClick(item)}>{item.price}</Badge>
             </ListGroup.Item>
           ))
         }

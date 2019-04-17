@@ -28,6 +28,8 @@ function rootReducer(state = initialState, action) {
     case 'INIT_LOAD_COMPLETE':
       return { ...state, initLoad: true };
     case 'SHOW_HIDE_BASE_PRICE':
+      favStocks = state.favStocks;
+      sendClickMessage({ type: 'SHOW_BASE_PRICE', payload: { isShowBasePrice: action.payload, favStocks } });
       return { ...state, isShowBasePrice: action.payload };
     case 'ADD_FAV_STOCK':
       favStocks = [...state.favStocks, action.payload];

@@ -1,6 +1,18 @@
-export function addNewStock() {
+export function addInstrument(option) {
   return (dispatch) => {
-    dispatch({ type: 'INIT_LOAD_COMPLETE', payload: true });
+    dispatch({ type: 'ADD_FAV_STOCK', payload: option });
+  };
+}
+
+export function updateInstrument(option) {
+  return (dispatch) => {
+    dispatch({ type: 'UPDATE_FAV_STOCK', payload: option });
+  };
+}
+
+export function deleteInstrument(name) {
+  return (dispatch) => {
+    dispatch({ type: 'DELETE_FAV_STOCK', payload: name });
   };
 }
 
